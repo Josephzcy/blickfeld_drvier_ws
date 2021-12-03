@@ -98,10 +98,10 @@ add_dependencies(${PROJECT_NAME}
     )
 
 ## The driver_node
-add_executable(${PROJECT_NAME}_node1
+add_executable(${PROJECT_NAME}_node
   src/blickfeld_driver_node.cpp
 )
-target_link_libraries(${PROJECT_NAME}_node1
+target_link_libraries(${PROJECT_NAME}_node
   PRIVATE
     ${catkin_LIBRARIES}
     ${PROJECT_NAME}
@@ -131,7 +131,7 @@ install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_core ${PROJECT_NAME}_nodelet
   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION})
 
 ## Nodes
-install(TARGETS ${PROJECT_NAME}_node1
+install(TARGETS ${PROJECT_NAME}_node
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 ## Header Files
